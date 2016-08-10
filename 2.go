@@ -2,6 +2,7 @@ package main
 //brunston 2016
 import (
 	"fmt"
+	"math"
 )
 
 func main() {
@@ -11,7 +12,11 @@ func main() {
 		fibsum = fibfirst + fiblast
 		fiblast = fibfirst
 		fibfirst = fibsum
-		retsum += fibsum
+		
+		if math.Mod(float64(fibsum), 2) == 0 {
+			retsum += fibsum
+		}
+		
 		if fibsum < 1000 {
 			fmt.Println(fibsum)
 		}
