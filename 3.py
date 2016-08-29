@@ -6,7 +6,8 @@ Euler 3
 from math import ceil, sqrt
 
 #make is_prime only search to square root
-
+#make main() begin with low values that % = 0, then divide n by that value to get the corresponding
+#   big value and test *that* value for prime-ness.
 def is_prime(n):
     if n == 2:
         return True
